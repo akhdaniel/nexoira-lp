@@ -26,10 +26,10 @@ onMounted(() => {
         <img :src="currentHeroImage" class="d-block mx-lg-auto img-fluid" alt="Chatbot Illustration" width="700" height="500" loading="lazy">
       </div>
       <div class="col-lg-6">
-        <h1 class="display-5 fw-bold lh-1 mb-3">Nexoira: Otomatiskan Interaksi WhatsApp Anda</h1>
+        <h1 class="display-5 fw-bold lh-1 mb-3">Nexoira: Otomatisasi Interaksi WhatsApp Anda</h1>
         <p class="lead">Tingkatkan layanan pelanggan dan efisiensi bisnis Anda dengan chatbot AI canggih yang terintegrasi langsung dengan WhatsApp. Siap melayani 24/7.</p>
         <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-          <a href="https://app.nexoira.chat" class="btn btn-success btn-lg px-4 me-md-2"><i class="bi bi-box-arrow-up-right me-2"></i>Buka Aplikasi</a>
+          <a href="https://app.nexoira.chat" class="btn btn-success btn-lg px-4 me-md-2"><i class="bi bi-box-arrow-up-right me-2"></i>Coba Gratis!</a>
           <a href="#features" class="btn btn-outline-secondary btn-lg px-4">Lihat Fitur</a>
         </div>
       </div>
