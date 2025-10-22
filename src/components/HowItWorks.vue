@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     whatsappLink() {
-      return `https://wa.me/${this.whatsappNumber}`;
+      return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent('Hi, saya mau tanya lebih lanjut')}`;
     }
   }
 };
