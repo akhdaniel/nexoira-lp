@@ -42,12 +42,24 @@
 export default {
   data() {
     return {
-      whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER
+      whatsappNumber: '',
+      defaultMessage: 'Hi, saya mau tanya lebih lanjut' // Fallback or default
     };
+  },
+  async created() {
+    try {
+      const response = await fetch('/config.json');
+      const config = await response.json();
+      this.whatsappNumber = config.whatsappNumber || this.whatsappNumber;
+      this.defaultMessage = config.defaultMessage || this.defaultMessage;
+    } catch (error) {
+      console.error('Error loading config.json:', error);
+    }
   },
   computed: {
     whatsappLink() {
-      return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent('Hi, saya mau tanya lebih lanjut')}`;
+      if (!this.whatsappNumber) return '#';
+      return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(this.defaultMessage)}`;
     }
   }
 };
