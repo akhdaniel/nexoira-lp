@@ -30,5 +30,25 @@
         <p>Dapatkan jawaban dan solusi untuk kebutuhan Anda secara instan.</p>
       </div>
     </div>
+    <div class="text-center mt-4">
+      <a :href="whatsappLink" target="_blank" class="btn btn-success btn-lg">
+        <i class="bi bi-whatsapp me-2"></i> Coba Chatbot Demo
+      </a>
+    </div>
 </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER
+    };
+  },
+  computed: {
+    whatsappLink() {
+      return `https://wa.me/${this.whatsappNumber}`;
+    }
+  }
+};
+</script>
